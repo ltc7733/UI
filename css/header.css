@@ -1,0 +1,236 @@
+@charset "utf-8";
+body{
+	background: #f5f8f9;
+}
+.header{
+	width: 100%;
+	height: 120px;
+}
+/*顶部菜单栏样式*/
+.menu{
+	width: 100%;
+	height: 30px;
+}
+.menu-login{
+	float: left;
+	margin-left: 15%;
+	line-height: 29px;
+}
+.menu-main{
+	float: right;
+	line-height: 29px;
+	margin-right: 15%;
+}
+.header span{
+	margin-right: 5px;
+}
+.header a{
+	margin-left: 5px;
+}
+.header a:hover{
+	color: #45b6f7;
+}
+/*导航栏样式*/
+.nav{
+	width: 100%;
+	height: 90px;
+	background-color: #fff;
+}
+.nav-logo{
+	float: left;
+	margin-left: 15%;
+	line-height: 90px;
+}
+.nav-logo a{
+	font: bold 32px FZShuTi;
+}
+.nav-bar,.shade,.nav-seach{
+	display: none;
+}
+.nav-main{
+	float: right;
+	margin-right: 7%;
+}
+/*一级菜单栏样式*/
+.nav-main ul li{
+	position: relative;
+	float: left;	
+	line-height: 90px;
+	font-size: 20px;
+	color: #000;
+}
+.nav-main ul li span{
+	font-size: 20px;
+	color: #000;
+}
+.nav-main ul li a{
+	display: block;
+	float: left;
+	width: 104px;
+	margin-left: 0;
+}
+.nav-main ul li a i{
+	margin: 0 8px 0 20px;
+}
+.nav-main ul li a:hover{
+	display:block;
+	background: #444;
+	color: #fff;
+}
+/*二级菜单栏样式*/
+.nav-main ul li ul{
+	display: none;
+	position: absolute;	
+	top: 90px;
+	left: -22px;
+	width: 150px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-bottom: none;
+	text-align: center;
+	z-index: 2;
+}
+.nav-main ul li ul li {
+	float: none;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 40px !important;
+}
+.nav-main ul li ul li a{
+	width: 151px;
+	height: 40px;
+	border-bottom: 1px solid #ddd;
+}
+.nav-main ul li ul li a:hover{
+	background: #ddd;
+	color: #000;
+}
+/*设置当鼠标放在一级菜单时显示二级菜单*/
+.nav-main ul li:hover ul {
+	display: block;
+}
+.nav-seach{
+	display: block;
+	position: absolute;
+	right: 4%;
+	top: 66px;
+}
+/*搜索框样式*/
+.seach{
+	display: none;
+	position: absolute;	
+	top: 120px;
+	width: 100%;
+	height: 90px;
+	background: #eef1f6;
+	border: 1px solid #f0f0f0;
+	z-index: 1;
+}
+.seach input{
+	float:left;
+	margin: 26px 0 0 32%;
+	width: 30%;
+	height: 38px;
+	border: 1px solid #61c1f8;
+}
+.seach button{
+	margin-top: 26px;
+	width: 8%;
+	height: 40px;
+	border: 1px solid #61c1f8;
+	background-color: #61c1f8;
+	color:  #fff;
+}
+/*当屏幕宽度小于900的样式*/
+@media screen and (max-width: 900px){
+	.header{
+		height: 100px;
+	}
+	.nav-main,.menu{
+		display: none;
+	}
+	.nav{
+		height: 40px;
+		text-align: center;
+	}
+	.nav-logo{
+		float: none;
+		margin: 0 auto;
+		line-height: 40px;
+	}
+	.nav-logo a{
+		margin-left: 0;
+		font-size: 20px;
+	}
+	.nav-bar{
+		display: block;
+		position: absolute;
+		left: 30px;
+		line-height: 40px;
+	}
+	.nav-seach{
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 12px;
+	}
+	.seach{
+		top: 41px;
+		height: 70px;
+	}
+	.seach input{
+		margin-top: 20px;
+		height: 30px;
+	}
+	.seach button{
+		margin-top: 20px;
+		width: 16%;
+		height: 32px;
+	}
+	.nav-main-case{
+		width: 100%;
+		overflow: hidden;
+	}
+	.nav-main-move{
+		display: none;
+		position: fixed;
+		top: 0;
+		width: 104%;
+		height: 100%;
+		opacity: 0.95;
+		background: #000;
+		text-align: center;
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: 4;
+	}
+	.nav-main-move ul li{
+		margin: 0 auto;
+		width: 50%;
+		border-bottom: 1px solid #fff;
+		line-height: 40px;
+	}
+	.nav-main-move ul li a{
+		font-size: 16px;
+		color: #fff;
+	}
+	.nav-main-move ul li ul{
+		display: none;
+	}
+	.nav-main-move ul li ul li a{
+		font-size: 12px;
+	}
+	.nav-main-move ul li ul li:first-child{
+		border-top: 1px solid #fff;
+	}
+	.nav-main-move ul li ul li:last-child{
+		display: block;
+		border-bottom: none;
+	}
+	.nav-main-move ul li:hover ul{
+		display: block;
+	}
+	.nav-main-move ul li:last-child{
+		display: none;
+	}
+}

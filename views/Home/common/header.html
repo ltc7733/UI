@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>网站顶部页面,包含菜单和导航栏</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../../../plugins/layui/css/layui.css" />
+		<script type="text/javascript" src="../../../plugins/jQuery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../../../js/script.js"></script>
+		<script type="text/javascript">
+			//当浏览器大小变化时自动刷新页面
+			$(window).resize(function(){         
+				if($(window).width()>=900){
+					$("#navMain").attr("class","nav-main");
+					$("#navMain").css("display","block");
+					$(".move-i").css('display','inline');
+				}else{
+					$("#navMain").attr("class","nav-main-move");
+					$("#navMain").css("display","none");;
+					$(".move-i").css('display','none'); 
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<header class="header">
+			<!--菜单div开始-->
+			<div class="menu">
+				<div class="menu-login">
+					<a href="#"><span class="layui-icon layui-icon-username"></span>登录</a>
+					<a href="#"><span class="layui-icon layui-icon-face-smile"></span>注册</a>
+				</div>
+				<div class="menu-main">
+					<a href="#"><span class="layui-icon layui-icon-dialogue"></span>微语</a>
+					<a href="#"><span class="layui-icon layui-icon-edit"></span>留言</a>
+					<a href="#"><span class="layui-icon layui-icon-face-surprised"></span>福利</a>
+					<a href="#"><span class="layui-icon layui-icon-about"></span>关于博客</a>
+					<a href="#"><span class="layui-icon layui-icon-set"></span>系统管理</a>
+				</div>			
+			</div>
+			<!--菜单div结束-->
+			<!--导航div开始-->
+		<div class="nav">
+			<i class="layui-icon layui-icon-menu-fill nav-bar" onclick="showNav()"></i>
+			<div class="nav-logo">					
+				<a href="#">
+					LL博客
+				</a>
+			</div>
+			<div class="nav-main-case" id="navMainCase" onclick="hideNav()">
+				<div class="nav-main" id="navMain">
+					<ul>						
+						<li><a href="#"><i class="layui-icon layui-icon-home move-i"></i>首页</a></li>
+						<li><a href="#"><i class="layui-icon layui-icon-read move-i"></i>语录</a>
+							<ul>
+								<li><a href="#">心情语录</a></li>
+								<li><a href="#">美文欣赏</a></li>
+								<li><a href="#">法律讲堂</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="layui-icon layui-icon-app move-i"></i>软件</a>
+							<ul>
+								<li><a href="#">mac</a></li>
+								<li><a href="#">linux</a></li>
+								<li><a href="#">windows</a></li>
+								<li><a href="#">系统镜像</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="layui-icon layui-icon-template-1 move-i"></i>技能</a>
+							<ul>
+								<li><a href="#">office</a></li>
+								<li><a href="#">系统常见问题</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="layui-icon layui-icon-template move-i"></i>教程</a>
+							<ul>
+								<li><a href="#">Java</a></li>
+								<li><a href="#">Linux</a></li>
+								<li><a href="#">Python</a></li>
+								<li><a href="#">数据结构</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="layui-icon layui-icon-website move-i"></i>娱乐</a>
+							<ul>
+								<li><a href="#">图片</a></li>
+								<li><a href="#">音乐</a></li>
+								<li><a href="#">电影</a></li>
+								<li><a href="#">游戏</a></li>
+							</ul>
+						</li>					
+					</ul>
+				</div>
+			</div>
+			<span class="layui-icon layui-icon-search nav-seach" id="seachSpanMove" onclick="seachAction()"></span>
+		</div> 
+		<!--导航div开始-->
+		
+		<!--搜索div开始-->
+		<div class="seach" id="seach">
+			<form action="" >
+				<input type="text" name="seach" autocomplete="off"/><button ><span class="layui-icon layui-icon-search"></span></button>
+			</form>
+		</div>
+		<!--搜索div结束-->	
+		</header>
+	</body>
+</html>
